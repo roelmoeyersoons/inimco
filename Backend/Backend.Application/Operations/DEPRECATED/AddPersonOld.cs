@@ -47,7 +47,7 @@ namespace Backend.Application.Operations
         private IPersonRepository _repo { get; set; }
         private ISocialMediaFactory _socialMediaFactory { get; }
 
-        public AddPersonOld(IPersonRepositoryFactory<IPersonRepository> factory, ISocialMediaFactory socialMediaFactory)
+        public AddPersonOld(IPersonRepositoryFactory factory, ISocialMediaFactory socialMediaFactory)
         {
             if (factory is null)
             {

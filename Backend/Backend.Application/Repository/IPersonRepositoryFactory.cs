@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Backend.Application.Repository
 {
-    public interface IPersonRepositoryFactory<out T> where T : IPersonRepository
+    public interface IPersonRepositoryFactory
     {
-        public T GetRepository();
+        public IPersonRepository GetRepository();
     }
 }

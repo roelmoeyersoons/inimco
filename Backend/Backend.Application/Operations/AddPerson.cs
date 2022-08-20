@@ -22,7 +22,7 @@ namespace Backend.Application.Operations
         private IPersonRepository _repo { get; set; }
 
 
-        public AddPerson(IPersonRepositoryFactory<IPersonRepository> factory)
+        public AddPerson(IPersonRepositoryFactory factory)
         {
             if (factory is null)
             {

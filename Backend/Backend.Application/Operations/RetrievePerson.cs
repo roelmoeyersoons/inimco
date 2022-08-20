@@ -17,7 +17,7 @@ namespace Backend.Application.Operations
     {
         private IPersonRepository _repo { get; set; }
 
-        public RetrievePerson(IPersonRepositoryFactory<IPersonRepository> factory)
+        public RetrievePerson(IPersonRepositoryFactory factory)
         {
             _repo = factory.GetRepository();
         }

@@ -1,3 +1,10 @@
+using Backend.Application.Operations;
+using Backend.Application.Repository;
+using Backend.Persistence;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using System.Reflection;
+
 namespace Backend.API
 {
     public class Program
@@ -12,6 +19,7 @@ namespace Backend.API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            AddInimco(builder.Services); //more beautiful would be an extension method
 
             var app = builder.Build();
 
@@ -23,7 +31,6 @@ namespace Backend.API
             }
 
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
 
             var summaries = new[]
@@ -31,8 +38,23 @@ namespace Backend.API
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-            app.MapGet("/weatherforecast", (HttpContext httpContext) =>
+            app.MapGet("/getperson/{personId}", (string personIdString, [FromServices]int myOperationInjector , HttpContext httpContext) =>
             {
+                var personId = Guid.Parse(personIdString);
+                var operationParameters = new RetrievePersonParams
+                {
+                    Id = personId
+                };
+
+                
+
+                //httpContext.service
+
+                //var operation = 
+
+                //httpcon
+                //var operation
+
                 var forecast = Enumerable.Range(1, 5).Select(index =>
                     new WeatherForecast
                     {
@@ -46,6 +68,24 @@ namespace Backend.API
             .WithName("GetWeatherForecast");
 
             app.Run();
+        }
+
+        public static void AddInimco(IServiceCollection services)
+        {
+            services.AddSingleton<IPersonRepositoryFactory, InimcoDbContextFactory>();
+
+            //var iAsyncOperationType = typeof(IAsyncOperation);
+            //var allFoundOperations = AppDomain.CurrentDomain.GetAssemblies()
+            //    .SelectMany(x => x.GetTypes())
+            //    .Where(x => iAsyncOperationType.IsAssignableFrom(x) && x.IsClass);
+
+            //foreach (var operation in allFoundOperations)
+            //{
+            //    builder.Services.AddTransient<IAsyncOperation, AddSkillToPerson>();
+            //    builder.Services.AddTransient<IAsyncOperation, AddSkillToPerson>();
+            //    builder.Services.AddTransient<IAsyncOperation, AddSkillToPerson>();
+            //    builder.Services.AddTransient<IAsyncOperation, AddSkillToPerson>();
+            //}
         }
     }
 }

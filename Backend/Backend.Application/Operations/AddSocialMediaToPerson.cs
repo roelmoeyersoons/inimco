@@ -24,7 +24,7 @@ namespace Backend.Application.Operations
 
         private ISocialMediaFactory _socialMediaFactory;
 
-        public AddSocialMediaToPerson(IPersonRepositoryFactory<IPersonRepository> factory, ISocialMediaFactory socialMediaFactory)
+        public AddSocialMediaToPerson(IPersonRepositoryFactory factory, ISocialMediaFactory socialMediaFactory)
         {
             if (factory is null)
             {

@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace Backend.Persistence
 {
-    internal class IninmcoDbContextFactory : IPersonRepositoryFactory<InimcoDbContext>
+    public class InimcoDbContextFactory : IPersonRepositoryFactory
     {
-        public InimcoDbContext GetRepository()
+        public IPersonRepository GetRepository()
         {
+
+            //ideally also resolved via DI, no "new's" anywhere :)
             return new InimcoDbContext();
         }
     }
