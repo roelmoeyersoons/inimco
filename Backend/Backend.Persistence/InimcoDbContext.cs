@@ -6,22 +6,15 @@ namespace Backend.Persistence
 {
     public class InimcoDbContext : DbContext, IPersonRepository
     {
+        public DbSet<Person> Persons { get; set; }
 
-        
-        public Task<bool> CreatePerson(Person person)
-        {
-            Add(person);
-            return Task.FromResult(true);
-        }
+        public DbSet<Skill> Skills { get; set; }
 
-        public Task<bool> GetPeopleHavingSkills(Skill skill)
-        {
-            throw new NotImplementedException();
-        }
+        public DbSet<ISocialAccount> SocialAccounts { get; set; }
 
-        public Task<Person> GetPerson(string personId)
+        public Task<int> SaveChangesAsync()
         {
-            retrun
+            return base.SaveChangesAsync();
         }
     }
 }

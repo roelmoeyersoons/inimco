@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Backend.Model.SocialAccountTypes
+namespace Backend.Application.Operations
 {
-    public class Twitter : SocialAccountBase
+    internal class RetrievePersonsHavingSocialSkill
     {
-        
     }
 }
