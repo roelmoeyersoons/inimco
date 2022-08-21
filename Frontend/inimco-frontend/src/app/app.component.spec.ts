@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'inimco-frontend'`, () => {
+  it(`should have as title 'Inimco-Frontend'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('inimco-frontend');
+    expect(app.title).toEqual('Inimco-Frontend');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('inimco-frontend app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('Inimco-Frontend app is running!');
   });
 });
