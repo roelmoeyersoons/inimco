@@ -38,22 +38,18 @@ namespace Backend.API
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-            app.MapGet("/getperson/{personId}", (string personIdString, [FromServices]int myOperationInjector , HttpContext httpContext) =>
+            app.MapGet("/getperson/{personId}", (string personIdString, [FromServices] int myOperationInjector , HttpContext httpContext) =>
             {
                 var personId = Guid.Parse(personIdString);
                 var operationParameters = new RetrievePersonParams
                 {
                     Id = personId
                 };
-
                 
+                //use injected service to grab operation object
+                //var result = operation.execute(params)
 
-                //httpContext.service
-
-                //var operation = 
-
-                //httpcon
-                //var operation
+                //return result. possibly in wrapper object.
 
                 var forecast = Enumerable.Range(1, 5).Select(index =>
                     new WeatherForecast
