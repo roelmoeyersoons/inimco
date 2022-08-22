@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.API", "Backend.API\Backend.API.csproj", "{AA230AE5-40D3-4C15-9D91-0D6DE82A7896}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.API", "Backend.API\Backend.API.csproj", "{AA230AE5-40D3-4C15-9D91-0D6DE82A7896}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.Model", "Backend.Model\Backend.Model.csproj", "{7F3DA327-6D67-4C5E-9340-10D2DB5BBE80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.Model", "Backend.Model\Backend.Model.csproj", "{7F3DA327-6D67-4C5E-9340-10D2DB5BBE80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.Persistence", "Backend.Persistence\Backend.Persistence.csproj", "{E7257991-583E-4A95-B140-86C0772F24A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.Persistence", "Backend.Persistence\Backend.Persistence.csproj", "{E7257991-583E-4A95-B140-86C0772F24A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.Application", "Backend.Application\Backend.Application.csproj", "{0C6BB668-6EFE-4883-98F9-5E9CE4B9E681}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.Application", "Backend.Application\Backend.Application.csproj", "{0C6BB668-6EFE-4883-98F9-5E9CE4B9E681}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.ApplicationTests", "Backend.ApplicationTests\Backend.ApplicationTests.csproj", "{FC72D57A-2926-4296-83C0-0CA7EDD6ACFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{0C6BB668-6EFE-4883-98F9-5E9CE4B9E681}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C6BB668-6EFE-4883-98F9-5E9CE4B9E681}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C6BB668-6EFE-4883-98F9-5E9CE4B9E681}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC72D57A-2926-4296-83C0-0CA7EDD6ACFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC72D57A-2926-4296-83C0-0CA7EDD6ACFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC72D57A-2926-4296-83C0-0CA7EDD6ACFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC72D57A-2926-4296-83C0-0CA7EDD6ACFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

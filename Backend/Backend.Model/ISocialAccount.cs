@@ -11,5 +11,7 @@ namespace Backend.Model
         public string Address { get; set; }
 
         public string ConstructUrl();
+
+        public Person Person { get; set; }
     }
 }

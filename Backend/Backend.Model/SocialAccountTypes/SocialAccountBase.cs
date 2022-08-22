@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Backend.Model.SocialAccountTypes
 {
-    public class Twitter : ISocialAccount
+    public abstract class SocialAccountBase : ISocialAccount
     {
         public string Address { get; set; }
 
-        public string ConstructUrl()
+        public Person Person { get; set; }
+
+        public virtual string ConstructUrl()
         {
             throw new NotImplementedException();
         }
